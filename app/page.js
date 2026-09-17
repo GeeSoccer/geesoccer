@@ -1,4 +1,4 @@
-const rows = [
+const stats = [
 
   ["Over 0.5", "3/3", "100%"],
 
@@ -24,53 +24,45 @@ export default function Home() {
 
   return (
 
-    <main>
+    <main className="page">
 
-      <header>
+      <header className="hero">
 
-        <b>GeeSoccer</b>
+        <div className="brand">GEESOCCER ⚽</div>
 
-        <span>Facts. Stats. Your Edge.</span>
+        <div className="league">BUNDESLIGA</div>
+
+        <h1>Facts. Stats. Your Edge.</h1>
+
+        <p>Nur echte Spiele. Keine automatischen Prognosen.</p>
 
       </header>
 
-      <section className="hero">
+      <section className="match">
 
-        <small>BUNDESLIGA · MATCH CENTER</small>
+        <span>Bundesliga</span>
 
-        <h1>
+        <h2>Borussia Dortmund</h2>
 
-          Borussia Dortmund <i>vs</i> Gegner
+        <div className="vs">VS</div>
 
-        </h1>
-
-        <p>Nur echte, abgeschlossene Spiele · keine automatischen Prognosen</p>
+        <h2>FC Bayern München</h2>
 
       </section>
 
-      <nav>
-
-        <button>Letzte 5</button>
-
-        <button>Letzte 10</button>
-
-        <button>Gesamt</button>
-
-        <button>Heim</button>
-
-      </nav>
-
       <section className="card">
 
-        <h2>Form & Tore</h2>
+        <h3>FORM</h3>
 
-        <div className="kpis">
+        <div className="buttons">
 
-          <div><strong>3</strong><span>Spiele</span></div>
+          <button>Letzte 5</button>
 
-          <div><strong>8:2</strong><span>Tore</span></div>
+          <button>Letzte 10</button>
 
-          <div><strong>2/3</strong><span>Over 2.5</span></div>
+          <button>Heim</button>
+
+          <button>Auswärts</button>
 
         </div>
 
@@ -78,45 +70,57 @@ export default function Home() {
 
       <section className="card">
 
-        <h2>Goal Trends</h2>
+        <h3>TOR-STATISTIKEN</h3>
 
-        {rows.map((r) => (
+        {stats.map(([name, count, percent]) => (
 
-          <div className="row" key={r[0]}>
+          <div className="stat" key={name}>
 
-            <span>{r[0]}</span>
+            <span>{name}</span>
 
-            <b>{r[1]}</b>
+            <strong>{count}</strong>
 
-            <em>{r[2]}</em>
+            <b>{percent}</b>
 
           </div>
 
         ))}
 
-        <p className="hint">
+      </section>
 
-          Jede Quote soll später die exakten Spiele als Nachweis öffnen.
+      <section className="card">
+
+        <h3>HEAD TO HEAD</h3>
+
+        <p>Direkte Duelle der beiden Teams aus abgeschlossenen Spielen.</p>
+
+      </section>
+
+      <section className="gee">
+
+        <div className="geeTitle">GEE ANALYSIS</div>
+
+        <p>
+
+          Daten sind Daten – <strong>Gee ist Gee.</strong>
 
         </p>
 
-      </section>
+        <div className="pick">
 
-      <section className="card gee">
+          <small>GEE PROGNOSE</small>
 
-        <small>MANUELL · KLAR GETRENNT VON DEN DATEN</small>
+          <strong>Dortmund verliert nicht + Over 2.5</strong>
 
-        <h2>Gee Analysis</h2>
-
-        <p>Hier kommt deine persönliche Spielanalyse hinein.</p>
-
-        <h3>Gee Prognose</h3>
-
-        <p className="pick">Noch keine Prognose veröffentlicht.</p>
+        </div>
 
       </section>
 
-      <footer>Daten sind Daten – Gee ist Gee. ⚽</footer>
+      <footer>
+
+        Historische Statistiken • Keine automatische Wettprognose
+
+      </footer>
 
     </main>
 
