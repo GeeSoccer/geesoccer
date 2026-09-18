@@ -285,3 +285,14 @@ footer {
   }
 
 }
+@media (max-width: 600px) {
+  .stat {
+    grid-template-columns: minmax(0, 1fr) 64px 64px;
+    gap: 6px;
+  }
+
+  .stat strong,
+  .stat b {
+    text-align: right;
+  }
+}
