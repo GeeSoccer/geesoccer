@@ -210,7 +210,7 @@ button {
 
   display: grid;
 
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: minmax(0, 1fr) 52px 52px;
 
   gap: 12px;
 
