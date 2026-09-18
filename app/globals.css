@@ -267,3 +267,21 @@ footer {
   color: #8b9690;
 
   text-align: center;
+}
+@media (max-width: 600px) {
+
+  .hero {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .stats-row {
+
+    grid-template-columns: 1fr auto auto;
+
+    gap: 10px;
+
+  }
+
+}
