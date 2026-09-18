@@ -276,7 +276,7 @@ footer {
 
   }
 
-  .stats-row {
+  .stat {
 
     grid-template-columns: 1fr auto auto;
 
